@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MDU">
+	<test name="Basic">
+	<parameter name="url" value="http://www.mdurohtak.ac.in/"></parameter>
+		<classes>
+			<class name="com.mdu.TestPages.HomePageTest" />	
+		</classes>
+	</test>
+</suite>

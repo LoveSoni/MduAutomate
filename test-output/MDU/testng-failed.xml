@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MDU]">
+  <test thread-count="5" name="Basic(failed)">
+    <classes>
+      <class name="com.mdu.TestPages.HomePageTest">
+        <methods>
+          <include name="test_mduNet"/>
+          <include name="titleTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.mdu.TestPages.HomePageTest -->
+    </classes>
+  </test> <!-- Basic(failed) -->
+</suite> <!-- Failed suite [MDU] -->

@@ -1,0 +1,638 @@
+<html>
+<head>
+<title>TestNG:  Basic</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Basic</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/2</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jul 14 12:28:53 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>525 seconds (525194 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler$ (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:212:15)
+    at tryCatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (&lt;anonymous&gt;)
+    at new F (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\protocol\protocol.js:331:32)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:403:15
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9), error=invalid session id, message=A session is either terminated or not started}
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-OHEAHH8&apos;, ip: &apos;192.168.123.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.mdu.TestPages.HomePageTest.setUp(HomePageTest.java:19)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
+	... 41 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace40170008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace40170008'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler$ (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:212:15)
+    at tryCatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (&lt;anonymous&gt;)
+    at new F (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\protocol\protocol.js:331:32)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:403:15
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9), error=invalid session id, message=A session is either terminated or not started}
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-OHEAHH8&apos;, ip: &apos;192.168.123.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.mdu.TestPages.HomePageTest.setUp(HomePageTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
+	... 41 more
+</pre></div></td>
+<td>31</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.tearDown()'><b>tearDown</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.tearDown()'><b>tearDown</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.check_Agrade_Logoms()'><b>check_Agrade_Logoms</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.check_LogoArea()'><b>check_LogoArea</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.check_Logomsg()'><b>check_Logomsg</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.click_img()'><b>click_img</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_ArchiveLink()'><b>test_ArchiveLink</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_ClgPortal()'><b>test_ClgPortal</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_ContactLink()'><b>test_ContactLink</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_DDE()'><b>test_DDE</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_EmailDirectory()'><b>test_EmailDirectory</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_FBLink()'><b>test_FBLink</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_HomeLink()'><b>test_HomeLink</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>3</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_LResourcesLink()'><b>test_LResourcesLink</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_RTILink()'><b>test_RTILink</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>5</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_eRishi()'><b>test_eRishi</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td></td>
+<td>2</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.test_mduNet()'><b>test_mduNet</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler$ (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:212:15)
+    at tryCatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (&lt;anonymous&gt;)
+    at new F (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\protocol\protocol.js:331:32)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:403:15
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9), error=invalid session id, message=A session is either terminated or not started}
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-OHEAHH8&apos;, ip: &apos;192.168.123.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.mdu.TestPages.HomePageTest.setUp(HomePageTest.java:19)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
+	... 41 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace136157810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace136157810'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler$ (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:212:15)
+    at tryCatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (&lt;anonymous&gt;)
+    at new F (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\protocol\protocol.js:331:32)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:403:15
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9), error=invalid session id, message=A session is either terminated or not started}
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-OHEAHH8&apos;, ip: &apos;192.168.123.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.mdu.TestPages.HomePageTest.setUp(HomePageTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
+	... 41 more
+</pre></div></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+<tr>
+<td title='com.mdu.TestPages.HomePageTest.titleTest()'><b>titleTest</b><br>Test class: com.mdu.TestPages.HomePageTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler$ (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:212:15)
+    at tryCatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (&lt;anonymous&gt;)
+    at new F (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\protocol\protocol.js:331:32)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:403:15
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9), error=invalid session id, message=A session is either terminated or not started}
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-OHEAHH8&apos;, ip: &apos;192.168.123.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.mdu.TestPages.HomePageTest.setUp(HomePageTest.java:19)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
+	... 41 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace748842359", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace748842359'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler$ (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:212:15)
+    at tryCatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at invoke (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:136:37)
+    at enqueueResult (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:185:17)
+    at new Promise (&lt;anonymous&gt;)
+    at new F (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\core-js\library\modules\$.export.js:30:36)
+    at AsyncIterator.enqueue (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:184:12)
+    at AsyncIterator.prototype.(anonymous function) [as next] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:100:21)
+    at Object.runtime.async (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\babel-runtime\regenerator\runtime.js:209:12)
+    at asyncHandler (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\build\lib\protocol\protocol.js:331:32)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:403:15
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at logger (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\Love\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9), error=invalid session id, message=A session is either terminated or not started}
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-OHEAHH8&apos;, ip: &apos;192.168.123.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.mdu.TestPages.HomePageTest.setUp(HomePageTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:415)
+	... 41 more
+</pre></div></td>
+<td>0</td>
+<td>com.mdu.TestPages.HomePageTest@63440df3</td></tr>
+</table><p>
+</body>
+</html>
